@@ -70,7 +70,7 @@ class ProductController extends Controller
 
     public function show(string $id)
     {
-        $product = Product::whereId($id)->with('gallery', 'category', 'attributes', 'files', 'videos')->first();
+        $product = Product::whereSlug($id)->with('gallery', 'category', 'attributes', 'files', 'videos')->first();
 
         DetectsUserEnvironment("Product Show $product->name", 'View');
 

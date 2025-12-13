@@ -4,7 +4,7 @@
 
 <div class="card-product grid" data-availability="In stock" data-brand="nike">
     <div class="card-product-wrapper" style="background: #ECEFF2;">
-        <a href="{{ url('product', ['id' => $products?->id]) }}" class="product-img">
+        <a href="{{ url('product', ['id' => $products?->slug]) }}" class="product-img">
             <img class="lazyload img-product" data-src="{{ $products?->mainImage?->image }}"
                 src="{{ $products?->mainImage?->image }}" alt="image-product">
             <img class="lazyload img-hover" data-src="{{ $products?->mainImage?->image }}"
@@ -44,7 +44,7 @@
             </a>
         </div> --}}
         <div class="list-btn-main">
-            <a href="{{ url('product', ['id' => $products?->id]) }}" class="btn-main-product">
+            <a href="{{ url('product', ['id' => $products?->slug]) }}" class="btn-main-product">
                 View Product
             </a>
         </div>

@@ -18,7 +18,7 @@
                     <div class="list-card-product">
                         <div class="card-product list-st-2 wow fadeInUp">
                             <div class="card-product-wrapper" style="background-color:#F7F7F7;border: 1px solid #ddd;">
-                                <a href="{{ url('product/' . $item->id) }}" class="product-img">
+                                <a href="{{ url('product/' . $item->slug) }}" class="product-img">
                                     <img class="lazyload img-product" data-src="{{ $item->mainImage->image }}"
                                         src="{{ $item->mainImage->image }}" alt="image-product">
 
@@ -38,7 +38,7 @@
                                 <div class="on-sale-wrap"><span class="on-sale-item">new</span></div>
                             </div>
                             <div class="card-product-info">
-                                <a href="{{ url('product/' . $item->id) }}" class="title link">
+                                <a href="{{ url('product/' . $item->slug) }}" class="title link">
                                     {{ $item->name ?? '' }}
                                 </a>
                                 <div class="bottom">
@@ -52,7 +52,7 @@
                                             {{ $item->category?->name ?? 'Biometric' }}
                                         </span>
                                     </div>
-                                    <a href="{{ url('product/' . $item->id) }}" class="box-icon">
+                                    <a href="{{ url('product/' . $item->slug) }}" class="box-icon">
                                         <svg width="25" height="24" viewBox="0 0 25 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path

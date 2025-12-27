@@ -47,8 +47,8 @@ class ContactController extends Controller
             if ($created) {
 
                 DetectsUserEnvironment("Contact", 'Create');
-                // Notification::route('mail', 'm.fahath@mirnah.com')
-                //     ->notify(new ProductInquiryNotification($request));
+                Notification::route('mail', 'fahathammex90@gmail.com')
+                    ->notify(new ProductInquiryNotification($request));
 
                 Notification::route('mail', 'ariffakil@gmail.com')
                     ->notify(new ProductInquiryNotification($request));
